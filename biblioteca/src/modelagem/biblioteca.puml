@@ -1,0 +1,47 @@
+@startuml ProjetoBiblioteca
+title Diagrama de Classes - ProjetoBiblioteca
+
+' Superclasse
+class Usuario {
+  - id: int
+  - nome: string
+  - email: string
+  - senha: string
+  - dataCadastro: Date
+  
+  + login(): void
+  + logout(): void
+  + exibirMenu(): void
+}
+
+' Subclasses
+class Leitor {
+  - numeroCarteirinha: string
+  
+  + realizarEmprestimo(): void
+  + devolverLivro(): void
+  + exibirMenu(): void
+}
+
+class Bibliotecario {
+  - codigoFuncionario: string
+  
+  + cadastrarLivro(): void
+  + removerLivro(): void
+  + exibirMenu(): void
+}
+
+class Administrador {
+  - nivelAcesso: int
+  
+  + gerenciarUsuarios(): void
+  + exibirRelatorios(): void
+  + exibirMenu(): void
+}
+
+' Relações
+Usuario <|-- Leitor
+Usuario <|-- Bibliotecario
+Usuario <|-- Administrador
+
+@enduml
