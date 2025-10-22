@@ -1,4 +1,4 @@
-# Funcionamento do programa
+# Funcionamento do programa - Carlos Eduardo Alves da Silva Delfino
 O programa simula um gerenciamento de usuários de uma biblioteca, destacando os níveis de acessos
 e responsabilidade. O principal objetivo é mostrar o funcionamento de heranças e polimorfismo na 
 Orientação a Objetos.
