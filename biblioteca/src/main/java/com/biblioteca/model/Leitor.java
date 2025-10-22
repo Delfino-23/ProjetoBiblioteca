@@ -2,7 +2,7 @@ package com.biblioteca.model;
 
 /**
  * Classe que representa um leitor da biblioteca.
- * Esta classe herda de Usuario e implementa funcionalidades específicas para leitores,
+ * Esta classe herda de Usuario e apresenta funcionalidades específicas para leitores,
  * como consultar e reservar livros.
  */
 
@@ -25,19 +25,18 @@ public class Leitor extends Usuario {
     @Override
     public String exibirMenu() {
         // Lógica para exibir o menu do leitor
-        return "=========================================" +
-                "\n1 - Consultar Livro" +
-                "\n2 - Reservar Livro" +
-                "\n3 - Devolver Livro" +
-                "\n=========================================";
+        return super.exibirMenu() +
+                "\n- Consultar Livro" +
+                "\n- Reservar Livro" +
+                "\n- Devolver Livro";
     }
 
     @Override
     public String toString() {
-        return "Leitor{" +
-                ", nome='" + getNome() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", dataCadastro=" + getDataCadastro() +
-                '}';
+        return "Leitor {" +
+                "\n\tNome: " + getNome() +
+                "\n\tEmail: " + getEmail() +
+                "\n\tData de Cadastro: " + getDataCadastro() +
+                "\n}";
     }
 }

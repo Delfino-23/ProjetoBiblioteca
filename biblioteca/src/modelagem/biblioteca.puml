@@ -41,7 +41,7 @@ class Administrador {
 
 ' Relações
 Usuario <|-- Leitor
-Usuario <|-- Bibliotecario
-Usuario <|-- Administrador
+Leitor <|-- Bibliotecario
+Bibliotecario <|-- Administrador
 
 @enduml

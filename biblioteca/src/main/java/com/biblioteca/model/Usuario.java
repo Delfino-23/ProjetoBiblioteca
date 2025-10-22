@@ -52,18 +52,16 @@ public abstract class Usuario {
     }
 
     public String exibirMenu() {
-        return "====================================" +
-                "\n1 - Login" +
-                "\n2 - Logout" +
-                "\n====================================";
+        return "\n- Login" +
+                "\n- Logout";
     }
 
     @Override
     public String toString() {
         return "Usuario{" +
-                "nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                ", dataCadastro=" + dataCadastro +
-                '}';
+                "\n\tNome: " + nome +
+                "\n\tEmail: " + email +
+                "\n\tData de Cadastro: " + dataCadastro +
+                "\n}";
     }
 }

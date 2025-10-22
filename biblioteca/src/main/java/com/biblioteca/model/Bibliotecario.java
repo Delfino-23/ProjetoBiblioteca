@@ -2,11 +2,11 @@ package com.biblioteca.model;
 
 /**
  * Classe que representa um bibliotecário da biblioteca.
- * Esta classe herda de Usuario e implementa funcionalidades específicas para bibliotecários,
+ * Esta classe herda de Leitor e além das funcionalidades de um leitor apresenta funcionalidades específicas para bibliotecários,
  * como cadastrar e remover livros.
  */
 
-public class Bibliotecario extends Usuario{
+public class Bibliotecario extends Leitor{
 
     public Bibliotecario(String nome, String email, String dataCadastro) {
         super(nome, email, dataCadastro);
@@ -25,19 +25,18 @@ public class Bibliotecario extends Usuario{
     @Override
     public String exibirMenu() {
         // Lógica para exibir o menu do bibliotecário
-        return "=========================================" +
-                "\n1 - Cadastrar Livro" +
-                "\n2 - Remover Livro" +
-                "\n3 - Consultar Empréstimos" +
-                "\n=========================================";
+        return super.exibirMenu() +
+                "\n- Cadastrar Livro" +
+                "\n- Remover Livro" +
+                "\n- Consultar Empréstimos";
     }
 
     @Override
     public String toString() {
-        return "Bibliotecario{" +
-                ", nome='" + getNome() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", dataCadastro=" + getDataCadastro() +
-                '}';
+        return "Leitor {" +
+                "\n\tNome: " + getNome() +
+                "\n\tEmail: " + getEmail() +
+                "\n\tData de Cadastro: " + getDataCadastro() +
+                "\n}";
     }
 }

@@ -2,11 +2,11 @@ package com.biblioteca.model;
 
 /**
  * Classe que representa um administrador da biblioteca.
- * Esta classe herda de Usuario e implementa funcionalidades específicas para administradores,
+ * Esta classe herda de Bibliotecario e além das funcionalidades de um bibliotecário apresenta funcionalidades específicas para administradores,
  * como gerenciar usuários.
  */
 
-public class Administrador extends Usuario {
+public class Administrador extends Bibliotecario {
 
     public Administrador(String nome, String email, String dataCadastro) {
         super(nome, email, dataCadastro);
@@ -20,20 +20,19 @@ public class Administrador extends Usuario {
     @Override
     public String exibirMenu() {
         // Lógica para exibir o menu do administrador
-        return "=========================================" +
-                "\n1 - Cadastrar Usuário" +
-                "\n2 - Remover Usuário" +
-                "\n3 - Consultar Relatórios" +
-                "\n4 - Consultar Usuários" +
-                "\n=========================================";
+        return super.exibirMenu() +
+                "\n- Cadastrar Usuário" +
+                "\n- Remover Usuário" +
+                "\n- Consultar Relatórios" +
+                "\n- Consultar Usuários";
     }
 
     @Override
     public String toString() {
-        return "Administrador{" +
-                ", nome='" + getNome() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", dataCadastro=" + getDataCadastro() +
-                '}';
+        return "Leitor {" +
+                "\n\tNome: " + getNome() +
+                "\n\tEmail: " + getEmail() +
+                "\n\tData de Cadastro: " + getDataCadastro() +
+                "\n}";
     }
 }
